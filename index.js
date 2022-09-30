@@ -38,6 +38,7 @@ const Connection = require('./lib/Connection');
 const { ConnectionPool, CloudConnectionPool } = require('./lib/pool');
 const Helpers = require('./lib/Helpers');
 const Serializer = require('./lib/Serializer');
+const AwsSigv4Signer = require('./lib/aws/AwsSigv4Signer');
 const errors = require('./lib/errors');
 const { ConfigurationError } = errors;
 const { prepareHeaders } = Connection.internals;
@@ -346,6 +347,7 @@ module.exports = {
   ConnectionPool,
   Connection,
   Serializer,
+  AwsSigv4Signer,
   events,
   errors,
 };
